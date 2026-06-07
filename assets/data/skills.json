@@ -1,0 +1,85 @@
+{
+  "categories": [
+    {
+      "id": "mobile",
+      "name": "Mobile Development",
+      "icon": "phone_iphone",
+      "skills": [
+        { "name": "Flutter / Dart", "percentage": 95, "years": 4 },
+        { "name": "Swift", "percentage": 95, "years": 8 },
+        { "name": "SwiftUI", "percentage": 90, "years": 4 },
+        { "name": "UIKit", "percentage": 95, "years": 8 },
+        { "name": "Kotlin (Android)", "percentage": 65, "years": 2 }
+      ]
+    },
+    {
+      "id": "architecture",
+      "name": "Architecture & Patterns",
+      "icon": "architecture",
+      "skills": [
+        { "name": "Clean Architecture", "percentage": 95, "years": 5 },
+        { "name": "MVVM", "percentage": 95, "years": 7 },
+        { "name": "VIPER", "percentage": 85, "years": 4 },
+        { "name": "MVC", "percentage": 90, "years": 8 },
+        { "name": "SOLID Principles", "percentage": 92, "years": 6 }
+      ]
+    },
+    {
+      "id": "state",
+      "name": "State Management",
+      "icon": "tune",
+      "skills": [
+        { "name": "Riverpod", "percentage": 90, "years": 3 },
+        { "name": "GetX", "percentage": 85, "years": 2 },
+        { "name": "Provider", "percentage": 88, "years": 3 },
+        { "name": "Combine (iOS)", "percentage": 80, "years": 3 }
+      ]
+    },
+    {
+      "id": "backend",
+      "name": "Backend & APIs",
+      "icon": "cloud",
+      "skills": [
+        { "name": "Firebase", "percentage": 90, "years": 5 },
+        { "name": "REST APIs", "percentage": 95, "years": 8 },
+        { "name": "GraphQL", "percentage": 70, "years": 2 },
+        { "name": "CoreData", "percentage": 88, "years": 6 },
+        { "name": "async/await", "percentage": 92, "years": 4 }
+      ]
+    },
+    {
+      "id": "devops",
+      "name": "DevOps & Tools",
+      "icon": "build",
+      "skills": [
+        { "name": "CI/CD (Fastlane)", "percentage": 90, "years": 4 },
+        { "name": "XCTest / Unit Testing", "percentage": 88, "years": 5 },
+        { "name": "Crashlytics", "percentage": 90, "years": 4 },
+        { "name": "Git", "percentage": 95, "years": 8 },
+        { "name": "Instruments", "percentage": 85, "years": 5 }
+      ]
+    },
+    {
+      "id": "security",
+      "name": "Security",
+      "icon": "security",
+      "skills": [
+        { "name": "AES-256/GCM Encryption", "percentage": 88, "years": 3 },
+        { "name": "OAuth 2.0", "percentage": 85, "years": 4 },
+        { "name": "Certificate Pinning", "percentage": 85, "years": 3 }
+      ]
+    },
+    {
+      "id": "leadership",
+      "name": "Leadership & Soft Skills",
+      "icon": "people",
+      "skills": [
+        { "name": "Technical Leadership", "percentage": 92, "years": 4 },
+        { "name": "Code Review", "percentage": 95, "years": 6 },
+        { "name": "Mentoring", "percentage": 90, "years": 4 },
+        { "name": "Agile / Scrum", "percentage": 90, "years": 6 },
+        { "name": "Prompt Engineering", "percentage": 85, "years": 2 }
+      ]
+    }
+  ]
+}

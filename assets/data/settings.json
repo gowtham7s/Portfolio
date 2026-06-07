@@ -1,0 +1,37 @@
+{
+  "settings": {
+    "siteTitle": "Gowtham Selvaraj – Mobile Lead Developer",
+    "siteDescription": "Personal portfolio of Gowtham Selvaraj, Mobile Lead Developer specializing in iOS Swift, Flutter, Clean Architecture, and scalable mobile systems.",
+    "siteKeywords": ["iOS Developer", "Flutter Developer", "Swift", "Mobile Lead", "Clean Architecture", "Bangalore"],
+    "siteUrl": "https://gowthamselvaraj.github.io/portfolio",
+    "ogImage": "assets/images/og_image.png",
+    "twitterHandle": "@gowthamselvaraj",
+    "googleAnalyticsId": "",
+    "defaultTheme": "dark"
+  },
+  "theme": {
+    "primaryColor": "#6C63FF",
+    "secondaryColor": "#00D9FF",
+    "accentColor": "#FF6B6B",
+    "darkBackground": "#0A0A0F",
+    "darkSurface": "#12121A",
+    "darkCard": "#1A1A2E",
+    "lightBackground": "#FAFAFA",
+    "lightSurface": "#FFFFFF",
+    "lightCard": "#F5F5F7",
+    "fontFamily": "Inter"
+  },
+  "navigation": [
+    { "label": "Home", "route": "/" },
+    { "label": "About", "route": "/about" },
+    { "label": "Skills", "route": "/skills" },
+    { "label": "Experience", "route": "/experience" },
+    { "label": "Projects", "route": "/projects" },
+    { "label": "Blog", "route": "/blog" },
+    { "label": "Contact", "route": "/contact" }
+  ],
+  "adminCredentials": {
+    "username": "admin",
+    "passwordHash": "8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918"
+  }
+}

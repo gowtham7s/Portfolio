@@ -1,0 +1,31 @@
+{
+  "testimonials": [
+    {
+      "id": "1",
+      "name": "Rajesh Kumar",
+      "role": "Engineering Manager",
+      "company": "Cognizant",
+      "avatar": "assets/images/testimonial_1.png",
+      "content": "Gowtham is an exceptional mobile architect. His work on the enterprise SDK ecosystem fundamentally changed how our teams build mobile apps. The 35% development acceleration we achieved is a testament to his deep technical expertise and forward-thinking architecture decisions.",
+      "rating": 5
+    },
+    {
+      "id": "2",
+      "name": "Priya Nair",
+      "role": "Product Manager",
+      "company": "CSC e-Governance",
+      "avatar": "assets/images/testimonial_2.png",
+      "content": "Working with Gowtham on the government e-Governance platform was outstanding. His understanding of security requirements and ability to implement AES-256 encryption while maintaining excellent UX was impressive. The app has been running flawlessly for thousands of citizens.",
+      "rating": 5
+    },
+    {
+      "id": "3",
+      "name": "David Chen",
+      "role": "CTO",
+      "company": "Depex Technologies",
+      "avatar": "assets/images/testimonial_3.png",
+      "content": "Gowtham delivered EduSams from concept to App Store in record time. His ability to lead the team, make critical architecture decisions, and maintain quality under pressure directly contributed to 55% revenue growth. A truly exceptional developer and leader.",
+      "rating": 5
+    }
+  ]
+}

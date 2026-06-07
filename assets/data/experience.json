@@ -1,0 +1,100 @@
+{
+  "experiences": [
+    {
+      "id": "cognizant",
+      "role": "Associate Architect – Mobile",
+      "company": "Cognizant",
+      "location": "Bangalore",
+      "startDate": "Jul 2021",
+      "endDate": "Present",
+      "isCurrent": true,
+      "logo": "assets/icons/cognizant.png",
+      "color": "#0066CC",
+      "highlights": [
+        "Led migration of legacy iOS features to Flutter, implementing modular Clean Architecture to improve build performance by 50% and enable scalable parallel development across teams.",
+        "Designed enterprise SDK ecosystem (Network, UI, Standard) adopted across different teams, reducing code duplication by 25% and accelerating development by 35%.",
+        "Improved app stability by integrating Crashlytics & analytics, reducing crash rate from 8% to <2%.",
+        "Architected Fastlane CI/CD pipelines, reducing deployment time from 1.5 hours to 20 minutes."
+      ],
+      "technologies": ["Flutter", "Swift", "SwiftUI", "Clean Architecture", "Fastlane", "Firebase", "Crashlytics", "CI/CD"]
+    },
+    {
+      "id": "csc",
+      "role": "iOS Developer",
+      "company": "CSC e-Governance Services India Ltd",
+      "location": "Delhi",
+      "startDate": "Sep 2020",
+      "endDate": "Jul 2021",
+      "isCurrent": false,
+      "logo": "assets/icons/csc.png",
+      "color": "#1E8449",
+      "highlights": [
+        "Architected and developed secure, government-compliant iOS applications using AES-256/GCM encryption and certificate pinning, delivering scalable public service solutions.",
+        "Integrated apps with national e-Governance systems for 10K+ users while building multiple iOS apps from scratch to App Store release, owning end-to-end lifecycle and collaborating closely with the CTO."
+      ],
+      "technologies": ["Swift", "UIKit", "AES-256/GCM", "Certificate Pinning", "REST APIs", "CoreData"]
+    },
+    {
+      "id": "depex",
+      "role": "Senior iOS Developer",
+      "company": "Depex Technologies",
+      "location": "Noida",
+      "startDate": "Mar 2020",
+      "endDate": "Aug 2020",
+      "isCurrent": false,
+      "logo": "assets/icons/depex.png",
+      "color": "#8E44AD",
+      "highlights": [
+        "Architected and delivered EduSams cloud-based school management platform for the African market, enabling remote education during COVID-19 and driving 55% revenue growth for clients.",
+        "Led end-to-end development of 3 production iOS applications, managing full SDLC from requirements to App Store release, implementing MVVM (SwiftUI/UIKit) and improving client satisfaction by 50%."
+      ],
+      "technologies": ["Swift", "SwiftUI", "UIKit", "MVVM", "Firebase", "REST APIs"]
+    },
+    {
+      "id": "madept",
+      "role": "iOS Developer",
+      "company": "MAdept Solutions",
+      "location": "Noida",
+      "startDate": "Jun 2018",
+      "endDate": "Mar 2020",
+      "isCurrent": false,
+      "logo": "assets/icons/madept.png",
+      "color": "#E67E22",
+      "highlights": [
+        "Developed and published 4+ production iOS applications within the first year, implementing RESTful APIs, CoreData, and push notifications with a focus on performance and UX.",
+        "Contributed to multiple iOS applications by enhancing features and optimizing existing functionalities, gaining strong exposure to diverse architectures, codebases and real-world development practices."
+      ],
+      "technologies": ["Swift", "UIKit", "CoreData", "REST APIs", "Push Notifications", "MVC"]
+    },
+    {
+      "id": "nttdata",
+      "role": "Data Entry & Conversion Sr Rep",
+      "company": "NTT Data",
+      "location": "Coimbatore",
+      "startDate": "Nov 2017",
+      "endDate": "Jun 2018",
+      "isCurrent": false,
+      "logo": "assets/icons/nttdata.png",
+      "color": "#2C3E50",
+      "highlights": [
+        "97%+ accuracy achieved; promoted to QA after 95% error reduction, demonstrating strong attention to detail."
+      ],
+      "technologies": []
+    },
+    {
+      "id": "sutherland",
+      "role": "Consultant",
+      "company": "SutherlandGlobal Services",
+      "location": "Chennai",
+      "startDate": "Sep 2016",
+      "endDate": "Feb 2017",
+      "isCurrent": false,
+      "logo": "assets/icons/sutherland.png",
+      "color": "#16A085",
+      "highlights": [
+        "Achieved 93% customer satisfaction supporting a large-scale eCommerce platform for India and US clients."
+      ],
+      "technologies": []
+    }
+  ]
+}

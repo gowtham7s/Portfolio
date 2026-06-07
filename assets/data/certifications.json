@@ -1,0 +1,48 @@
+{
+  "certifications": [
+    {
+      "id": "backend-capstone",
+      "title": "Back-End Developer Capstone",
+      "issuer": "Coursera",
+      "issuerLogo": "assets/icons/coursera.png",
+      "date": "Jul 2025",
+      "credentialUrl": "",
+      "pdfUrl": "",
+      "color": "#0056D2",
+      "badge": "assets/images/cert_backend.png"
+    },
+    {
+      "id": "prompt-engineering",
+      "title": "The Complete Prompt Engineering for AI Bootcamp",
+      "issuer": "Udemy",
+      "issuerLogo": "assets/icons/udemy.png",
+      "date": "May 2024",
+      "credentialUrl": "",
+      "pdfUrl": "",
+      "color": "#A435F0",
+      "badge": "assets/images/cert_prompt.png"
+    },
+    {
+      "id": "swiftui-netflix",
+      "title": "SwiftUI 2 - Build Netflix Clone - SwiftUI Best Practices",
+      "issuer": "Udemy",
+      "issuerLogo": "assets/icons/udemy.png",
+      "date": "May 2024",
+      "credentialUrl": "",
+      "pdfUrl": "",
+      "color": "#E50914",
+      "badge": "assets/images/cert_swiftui.png"
+    },
+    {
+      "id": "kotlin-android",
+      "title": "Kotlin for Android & Java Developers: Clean Code on Android",
+      "issuer": "Udemy",
+      "issuerLogo": "assets/icons/udemy.png",
+      "date": "Jun 2023",
+      "credentialUrl": "",
+      "pdfUrl": "",
+      "color": "#7F52FF",
+      "badge": "assets/images/cert_kotlin.png"
+    }
+  ]
+}

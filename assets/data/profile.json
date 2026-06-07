@@ -1,0 +1,31 @@
+{
+  "name": "Gowtham Selvaraj",
+  "title": "Mobile Lead Developer",
+  "subtitle": "iOS (Swift) & Flutter | Scalable App Design | AI-Integrated Solutions",
+  "taglines": [
+    "Mobile Lead Developer",
+    "iOS Swift Expert",
+    "Flutter Architect",
+    "Clean Code Advocate",
+    "CI/CD Specialist",
+    "Technical Leader"
+  ],
+  "summary": "Mobile Lead developer with 8+ years experience designing scalable iOS and cross-platform solutions for applications serving 150K+ daily active users. Expert in Swift, Flutter, Clean Architecture, and system design. Proven track record leading 8+ developers across multiple teams. Established enterprise-wide architectural standards, CI/CD pipelines, and reusable SDK frameworks achieving 25% faster delivery cycles. Specialized in performance optimization, secure mobile systems (AES/GCM, OAuth), and cross-functional technical leadership.",
+  "location": "Bangalore, India",
+  "email": "gowthamselvaraj.info@gmail.com",
+  "phone": "+91-7418612973",
+  "photo": "assets/images/profile.jpg",
+  "resume": "assets/resume/gowtham_selvaraj_resume.pdf",
+  "social": {
+    "github": "https://github.com/gowthamselvaraj",
+    "linkedin": "https://linkedin.com/in/gowthamselvaraj",
+    "twitter": "https://twitter.com/gowthamselvaraj",
+    "medium": "https://medium.com/@gowthamselvaraj"
+  },
+  "stats": [
+    { "label": "Years Experience", "value": "8+" },
+    { "label": "Apps Published", "value": "15+" },
+    { "label": "Daily Active Users", "value": "150K+" },
+    { "label": "Team Members Led", "value": "8+" }
+  ]
+}
