@@ -33,7 +33,7 @@ dependencies:
 
   # Icons
   cupertino_icons: ^1.0.8
-  font_awesome_flutter: ^10.7.0
+  font_awesome_flutter: 10.7.0
 
   # State Management
   flutter_riverpod: ^2.5.1
@@ -96,3 +96,4 @@ flutter:
     - assets/data/
     - assets/resume/
     - assets/lottie/
+    - assets/fonts/
