@@ -93,24 +93,28 @@ class _NavBar extends ConsumerWidget {
                 ),
               ),
             ),
-            const Spacer(),
             if (isMobile)
-              Builder(
-                builder: (context) => IconButton(
-                  onPressed: () => Scaffold.of(context).openDrawer(),
-                  icon: Icon(
-                    Icons.menu_rounded,
-                    color: isDark ? AppTheme.darkText : AppTheme.lightText,
+              Expanded(
+                child: Align(
+                  alignment: Alignment.centerRight,
+                  child: Builder(
+                    builder: (context) => IconButton(
+                      onPressed: () => Scaffold.of(context).openDrawer(),
+                      icon: Icon(
+                        Icons.menu_rounded,
+                        color: isDark ? AppTheme.darkText : AppTheme.lightText,
+                      ),
+                    ),
                   ),
                 ),
               )
             else ...[
-              Flexible(
+              Expanded(
                 child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: _navItems.map(
-                    (item) => _NavItem(label: item.$1, route: item.$2),
-                  ).toList(),
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: _navItems
+                      .map((item) => _NavItem(label: item.$1, route: item.$2))
+                      .toList(),
                 ),
               ),
               const SizedBox(width: 8),
