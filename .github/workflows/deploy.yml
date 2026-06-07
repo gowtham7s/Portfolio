@@ -42,7 +42,7 @@ jobs:
           flutter build web \
             --release \
             --base-href "/Portfolio/" \
-            --web-renderer canvaskit
+            --renderer canvaskit
 
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
