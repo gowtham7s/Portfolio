@@ -105,8 +105,13 @@ class _NavBar extends ConsumerWidget {
                 ),
               )
             else ...[
-              ..._navItems.map(
-                (item) => _NavItem(label: item.$1, route: item.$2),
+              Flexible(
+                child: Row(
+                  mainAxisSize: MainAxisSize.min,
+                  children: _navItems.map(
+                    (item) => _NavItem(label: item.$1, route: item.$2),
+                  ).toList(),
+                ),
               ),
               const SizedBox(width: 8),
               _ThemeToggle(),
