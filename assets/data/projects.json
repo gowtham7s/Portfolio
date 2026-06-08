@@ -7,14 +7,25 @@
       "description": "Designed and built a comprehensive enterprise SDK ecosystem comprising Network, UI, and Standard libraries. The SDK was adopted across different teams, reducing code duplication by 25% and accelerating development velocity by 35%. Implements Clean Architecture with protocol-oriented design, supporting both Swift and Flutter (via Dart FFI).",
       "thumbnail": "assets/images/project_sdk.png",
       "screenshots": [],
-      "technologies": ["Swift", "Flutter", "Clean Architecture", "SPM", "Dart", "CI/CD"],
+      "technologies": [
+        "Swift",
+        "Flutter",
+        "Clean Architecture",
+        "SPM",
+        "Dart",
+        "CI/CD"
+      ],
       "category": "SDK / Library",
       "featured": true,
       "githubUrl": "",
       "appStoreUrl": "",
       "playStoreUrl": "",
       "liveUrl": "",
-      "achievements": ["25% reduction in code duplication", "35% faster development", "Adopted by 5+ teams"]
+      "achievements": [
+        "25% reduction in code duplication",
+        "35% faster development",
+        "Adopted by 5+ teams"
+      ]
     },
     {
       "id": "govtech-app",
@@ -23,14 +34,25 @@
       "description": "Architected and developed a secure, government-compliant iOS application with AES-256/GCM encryption and certificate pinning. Integrated with national e-Governance systems serving 10,000+ daily users. Built from scratch to App Store release owning the complete end-to-end lifecycle.",
       "thumbnail": "assets/images/project_gov.png",
       "screenshots": [],
-      "technologies": ["Swift", "UIKit", "AES-256/GCM", "Certificate Pinning", "CoreData", "REST APIs"],
+      "technologies": [
+        "Swift",
+        "UIKit",
+        "AES-256/GCM",
+        "Certificate Pinning",
+        "CoreData",
+        "REST APIs"
+      ],
       "category": "iOS",
       "featured": true,
       "githubUrl": "",
       "appStoreUrl": "",
       "playStoreUrl": "",
       "liveUrl": "",
-      "achievements": ["10K+ daily users", "AES-256 secure", "Certificate pinning implemented"]
+      "achievements": [
+        "10K+ daily users",
+        "AES-256 secure",
+        "Certificate pinning implemented"
+      ]
     },
     {
       "id": "edusams",
@@ -39,14 +61,26 @@
       "description": "Architected and delivered a comprehensive cloud-based school management platform for the African market. The platform enabled remote education during COVID-19 lockdowns, driving 55% revenue growth for clients. Led end-to-end development of 3 production iOS applications using MVVM with SwiftUI/UIKit.",
       "thumbnail": "assets/images/project_edusams.png",
       "screenshots": [],
-      "technologies": ["Swift", "SwiftUI", "UIKit", "MVVM", "Firebase", "REST APIs", "CloudKit"],
+      "technologies": [
+        "Swift",
+        "SwiftUI",
+        "UIKit",
+        "MVVM",
+        "Firebase",
+        "REST APIs",
+        "CloudKit"
+      ],
       "category": "iOS",
       "featured": true,
       "githubUrl": "",
       "appStoreUrl": "",
       "playStoreUrl": "",
       "liveUrl": "",
-      "achievements": ["55% revenue growth", "3 production apps", "50% improved client satisfaction"]
+      "achievements": [
+        "55% revenue growth",
+        "3 production apps",
+        "50% improved client satisfaction"
+      ]
     },
     {
       "id": "flutter-portfolio",
@@ -55,14 +89,26 @@
       "description": "A premium personal portfolio website built entirely with Flutter Web. Features include dark/light themes, smooth animations, glassmorphism design, blog system, admin panel, and full CMS with JSON-based storage. Deployed via GitHub Pages with automated CI/CD.",
       "thumbnail": "assets/images/project_portfolio.png",
       "screenshots": [],
-      "technologies": ["Flutter Web", "Dart", "Riverpod", "go_router", "Clean Architecture", "GitHub Actions"],
+      "technologies": [
+        "Flutter Web",
+        "Dart",
+        "Riverpod",
+        "go_router",
+        "Clean Architecture",
+        "GitHub Actions"
+      ],
       "category": "Flutter",
       "featured": true,
       "githubUrl": "https://github.com/gowthamselvaraj/portfolio",
       "appStoreUrl": "",
       "playStoreUrl": "",
       "liveUrl": "https://gowthamselvaraj.github.io/portfolio",
-      "achievements": ["Flutter Web", "PWA Support", "Admin Panel", "Blog System"]
+      "achievements": [
+        "Flutter Web",
+        "PWA Support",
+        "Admin Panel",
+        "Blog System"
+      ]
     },
     {
       "id": "ci-cd-pipeline",
@@ -71,14 +117,41 @@
       "description": "Designed and implemented enterprise-grade CI/CD pipelines using Fastlane for iOS and Flutter apps. Automated testing, code signing, build distribution, and App Store/Play Store deployments. Reduced deployment time from 1.5 hours to 20 minutes, freeing developer time for feature work.",
       "thumbnail": "assets/images/project_cicd.png",
       "screenshots": [],
-      "technologies": ["Fastlane", "GitHub Actions", "Xcode Cloud", "Ruby", "Bash", "Firebase App Distribution"],
+      "technologies": [
+        "Fastlane",
+        "GitHub Actions",
+        "Xcode Cloud",
+        "Ruby",
+        "Bash",
+        "Firebase App Distribution"
+      ],
       "category": "DevOps",
       "featured": false,
       "githubUrl": "",
       "appStoreUrl": "",
       "playStoreUrl": "",
       "liveUrl": "",
-      "achievements": ["1.5 hrs → 20 min deployment", "Automated code signing", "Multi-team adoption"]
+      "achievements": [
+        "1.5 hrs → 20 min deployment",
+        "Automated code signing",
+        "Multi-team adoption"
+      ]
+    },
+    {
+      "id": "new-test-proje",
+      "title": "new test proje",
+      "shortDescription": "gfhgfu",
+      "description": ";kk;;j",
+      "thumbnail": "",
+      "screenshots": [],
+      "technologies": [],
+      "category": "",
+      "featured": false,
+      "githubUrl": "",
+      "appStoreUrl": "",
+      "playStoreUrl": "",
+      "liveUrl": "",
+      "achievements": []
     }
   ]
 }
