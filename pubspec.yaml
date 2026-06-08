@@ -63,6 +63,7 @@ dependencies:
   # JSON / Storage
   shared_preferences: ^2.2.3
   http: ^1.2.2
+  fl_chart: ^0.70.0
 
   # Responsive
   responsive_framework: ^1.4.0

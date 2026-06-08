@@ -148,6 +148,126 @@ class GitHubCmsService {
     );
   }
 
+  // ── Experience ───────────────────────────────────────────────────────────
+  Future<({List<dynamic> experiences, String sha})> getExperiences() async {
+    final r = await readJsonArray('experience.json');
+    // experience.json has a wrapper object: { "experiences": [...] }
+    if (r.items.isNotEmpty &&
+        r.items[0] is Map &&
+        (r.items[0] as Map).containsKey('experiences')) {
+      // Unlikely but guard
+    }
+    return (experiences: r.items, sha: r.sha);
+  }
+
+  Future<({List<dynamic> experiences, String sha})>
+  getExperiencesWrapped() async {
+    final file = await _getFile('experience.json');
+    final data = jsonDecode(file.content) as Map<String, dynamic>;
+    final items = data['experiences'] as List<dynamic>;
+    return (experiences: items, sha: file.sha);
+  }
+
+  Future<void> saveExperiences({
+    required String sha,
+    required List<Map<String, dynamic>> experiences,
+    String commitMessage = 'cms: update experience',
+  }) async {
+    await _putFile(
+      filename: 'experience.json',
+      sha: sha,
+      json: {'experiences': experiences},
+      commitMessage: commitMessage,
+    );
+  }
+
+  // ── Projects ─────────────────────────────────────────────────────────────
+  Future<({List<dynamic> projects, String sha})> getProjectsWrapped() async {
+    final file = await _getFile('projects.json');
+    final data = jsonDecode(file.content) as Map<String, dynamic>;
+    final items = data['projects'] as List<dynamic>;
+    return (projects: items, sha: file.sha);
+  }
+
+  Future<void> saveProjectsWrapped({
+    required String sha,
+    required List<Map<String, dynamic>> projects,
+    String commitMessage = 'cms: update projects',
+  }) async {
+    await _putFile(
+      filename: 'projects.json',
+      sha: sha,
+      json: {'projects': projects},
+      commitMessage: commitMessage,
+    );
+  }
+
+  // ── Certifications ────────────────────────────────────────────────────────
+  Future<({List<dynamic> certifications, String sha})>
+  getCertificationsWrapped() async {
+    final file = await _getFile('certifications.json');
+    final data = jsonDecode(file.content) as Map<String, dynamic>;
+    final items = data['certifications'] as List<dynamic>;
+    return (certifications: items, sha: file.sha);
+  }
+
+  Future<void> saveCertifications({
+    required String sha,
+    required List<Map<String, dynamic>> certifications,
+    String commitMessage = 'cms: update certifications',
+  }) async {
+    await _putFile(
+      filename: 'certifications.json',
+      sha: sha,
+      json: {'certifications': certifications},
+      commitMessage: commitMessage,
+    );
+  }
+
+  // ── Skills ────────────────────────────────────────────────────────────────
+  Future<({Map<String, dynamic> skills, String sha})> getSkillsWrapped() async {
+    final file = await _getFile('skills.json');
+    return (
+      skills: jsonDecode(file.content) as Map<String, dynamic>,
+      sha: file.sha,
+    );
+  }
+
+  Future<void> saveSkills({
+    required String sha,
+    required Map<String, dynamic> skills,
+    String commitMessage = 'cms: update skills',
+  }) async {
+    await _putFile(
+      filename: 'skills.json',
+      sha: sha,
+      json: skills,
+      commitMessage: commitMessage,
+    );
+  }
+
+  // ── Testimonials ──────────────────────────────────────────────────────────
+  Future<({List<dynamic> testimonials, String sha})>
+  getTestimonialsWrapped() async {
+    final file = await _getFile('testimonials.json');
+    final data = jsonDecode(file.content) as Map<String, dynamic>;
+    final items = data['testimonials'] as List<dynamic>;
+    return (testimonials: items, sha: file.sha);
+  }
+
+  Future<void> saveTestimonials({
+    required String sha,
+    required List<Map<String, dynamic>> testimonials,
+    String commitMessage = 'cms: update testimonials',
+  }) async {
+    await _putFile(
+      filename: 'testimonials.json',
+      sha: sha,
+      json: {'testimonials': testimonials},
+      commitMessage: commitMessage,
+    );
+  }
+
   // ── Validate token ───────────────────────────────────────────────────────
   Future<bool> validateToken() async {
     try {
