@@ -7,7 +7,7 @@
       "skills": [
         {
           "name": "Flutter / Dart",
-          "percentage": 80,
+          "percentage": 85,
           "years": 5
         },
         {
@@ -17,8 +17,8 @@
         },
         {
           "name": "SwiftUI",
-          "percentage": 90,
-          "years": 4
+          "percentage": 60,
+          "years": 2
         },
         {
           "name": "UIKit",

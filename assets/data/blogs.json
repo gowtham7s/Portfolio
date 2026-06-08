@@ -7,7 +7,12 @@
       "excerpt": "Learn how to structure your Flutter applications with Clean Architecture, featuring real-world examples from enterprise projects with 150K+ daily active users.",
       "content": "# Flutter Clean Architecture: A Practical Guide for 2025\n\nClean Architecture in Flutter separates your codebase into distinct layers...\n\n## The Three Layers\n\n### 1. Domain Layer\nThe innermost layer contains your business logic...\n\n### 2. Data Layer\nHandles all data operations...\n\n### 3. Presentation Layer\nContains your UI and state management...\n\n## Repository Pattern\n\n```dart\nabstract class SkillsRepository {\n  Future<List<Skill>> getSkills();\n}\n```\n\n## Conclusion\nClean Architecture pays dividends in large teams.",
       "category": "Flutter",
-      "tags": ["Flutter", "Clean Architecture", "Dart", "Best Practices"],
+      "tags": [
+        "Flutter",
+        "Clean Architecture",
+        "Dart",
+        "Best Practices"
+      ],
       "author": "Gowtham Selvaraj",
       "publishedAt": "2025-01-15T10:00:00Z",
       "updatedAt": "2025-01-15T10:00:00Z",
@@ -24,7 +29,13 @@
       "excerpt": "A deep dive into securing iOS applications for government-grade deployments using AES-256/GCM encryption, certificate pinning, and OAuth 2.0.",
       "content": "# iOS Security Best Practices\n\nWhen building government-grade iOS apps, security is paramount...\n\n## AES-256/GCM Encryption\n\n```swift\nfunc encrypt(data: Data, key: SymmetricKey) throws -> Data {\n    let sealedBox = try AES.GCM.seal(data, using: key)\n    return sealedBox.combined!\n}\n```\n\n## Certificate Pinning\n\nImplement SSL pinning using URLSessionDelegate...",
       "category": "iOS",
-      "tags": ["iOS", "Security", "Swift", "AES-256", "Certificate Pinning"],
+      "tags": [
+        "iOS",
+        "Security",
+        "Swift",
+        "AES-256",
+        "Certificate Pinning"
+      ],
       "author": "Gowtham Selvaraj",
       "publishedAt": "2025-02-10T10:00:00Z",
       "updatedAt": "2025-02-10T10:00:00Z",
@@ -41,7 +52,12 @@
       "excerpt": "From hobby projects to enterprise applications – key patterns and practices that make SwiftUI code maintainable, performant and testable.",
       "content": "# SwiftUI Best Practices\n\nSwiftUI has matured significantly...",
       "category": "SwiftUI",
-      "tags": ["SwiftUI", "iOS", "Swift", "Best Practices"],
+      "tags": [
+        "SwiftUI",
+        "iOS",
+        "Swift",
+        "Best Practices"
+      ],
       "author": "Gowtham Selvaraj",
       "publishedAt": "2025-03-05T10:00:00Z",
       "updatedAt": "2025-03-05T10:00:00Z",
@@ -58,7 +74,12 @@
       "excerpt": "Technical leadership isn't just about code reviews. Here's what I've learned leading mobile development teams at scale.",
       "content": "# Technical Leadership in Mobile Development\n\nLeading developers requires a different mindset than writing code...",
       "category": "Leadership",
-      "tags": ["Leadership", "Career", "Management", "Mobile"],
+      "tags": [
+        "Leadership",
+        "Career",
+        "Management",
+        "Mobile"
+      ],
       "author": "Gowtham Selvaraj",
       "publishedAt": "2025-04-12T10:00:00Z",
       "updatedAt": "2025-04-12T10:00:00Z",
@@ -75,7 +96,13 @@
       "excerpt": "A practical step-by-step guide to setting up Fastlane for iOS and Flutter, including App Store Connect automation and Firebase distribution.",
       "content": "# Fastlane CI/CD Guide\n\nBefore Fastlane, our iOS deployment took 1.5 hours...",
       "category": "Architecture",
-      "tags": ["CI/CD", "Fastlane", "DevOps", "iOS", "Flutter"],
+      "tags": [
+        "CI/CD",
+        "Fastlane",
+        "DevOps",
+        "iOS",
+        "Flutter"
+      ],
       "author": "Gowtham Selvaraj",
       "publishedAt": "2025-05-20T10:00:00Z",
       "updatedAt": "2025-05-20T10:00:00Z",
@@ -84,6 +111,26 @@
       "coverImage": "assets/images/blog_fastlane.png",
       "readTime": 12,
       "views": 980
+    },
+    {
+      "id": "1780931767782",
+      "title": "ghfgfgfgjfgjfgjfgjhjh",
+      "slug": "ghfgfgfgjfgjfgjfgjhjh",
+      "excerpt": "ggfhdfdftyhbkjhkjkjl l lhlhlhjkj",
+      "content": "utyrt tyfyyytyfy",
+      "author": "Gowtham Selvaraj",
+      "publishedAt": "2026-06-08",
+      "updatedAt": "2026-06-08",
+      "readTime": 2,
+      "views": 0,
+      "category": "Flutter",
+      "tags": [
+        "ai",
+        "aset"
+      ],
+      "status": "published",
+      "featured": true,
+      "coverImage": ""
     }
   ]
 }
