@@ -7,11 +7,7 @@ import 'core/theme/theme_provider.dart';
 import 'core/router/app_router.dart';
 
 void main() {
-  runApp(
-    const ProviderScope(
-      child: PortfolioApp(),
-    ),
-  );
+  runApp(const ProviderScope(child: PortfolioApp()));
 }
 
 class PortfolioApp extends ConsumerWidget {
@@ -20,7 +16,7 @@ class PortfolioApp extends ConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final isDark = ref.watch(themeProvider);
-    final router = ref.watch(routerProvider);
+    final router = ref.read(routerProvider);
 
     return MaterialApp.router(
       title: 'Gowtham Selvaraj – Mobile Lead Developer',

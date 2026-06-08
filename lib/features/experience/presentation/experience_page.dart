@@ -115,32 +115,78 @@ class _ExperienceCardState extends State<_ExperienceCard> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     children: [
                       // ── Header ──────────────────────────────────────────
-                      // Use Wrap so the "Current" badge wraps to the next
-                      // line instead of overflowing on narrow screens.
-                      Wrap(
-                        crossAxisAlignment: WrapCrossAlignment.center,
-                        spacing: 8,
-                        runSpacing: 6,
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
-                          Text(exp.role, style: theme.textTheme.titleLarge),
-                          if (exp.isCurrent)
-                            Container(
-                              padding: const EdgeInsets.symmetric(
-                                horizontal: 10,
-                                vertical: 4,
-                              ),
-                              decoration: BoxDecoration(
-                                color: AppTheme.success.withValues(alpha: 0.12),
-                                borderRadius: BorderRadius.circular(8),
-                              ),
-                              child: Text(
-                                'Current',
-                                style: theme.textTheme.labelMedium?.copyWith(
-                                  color: AppTheme.success,
-                                  fontWeight: FontWeight.w700,
+                          // Company logo
+                          if (exp.logo.isNotEmpty)
+                            Padding(
+                              padding: const EdgeInsets.only(right: 12),
+                              child: ConstrainedBox(
+                                constraints: const BoxConstraints(
+                                  minWidth: 40,
+                                  maxWidth: 80,
+                                  minHeight: 45,
+                                  maxHeight: 45,
+                                ),
+                                child: ClipRRect(
+                                  borderRadius: BorderRadius.circular(8),
+                                  child: Image.asset(
+                                    exp.logo,
+                                    height: 45,
+                                    fit: BoxFit.contain,
+                                    alignment: Alignment.center,
+                                    errorBuilder: (_, __, ___) => Container(
+                                      width: 45,
+                                      height: 45,
+                                      decoration: BoxDecoration(
+                                        color: color.withValues(alpha: 0.15),
+                                        borderRadius: BorderRadius.circular(8),
+                                      ),
+                                      child: Icon(
+                                        Icons.business_rounded,
+                                        color: color,
+                                        size: 24,
+                                      ),
+                                    ),
+                                  ),
                                 ),
                               ),
                             ),
+                          Expanded(
+                            child: Wrap(
+                              crossAxisAlignment: WrapCrossAlignment.center,
+                              spacing: 8,
+                              runSpacing: 6,
+                              children: [
+                                Text(
+                                  exp.role,
+                                  style: theme.textTheme.titleLarge,
+                                ),
+                                if (exp.isCurrent)
+                                  Container(
+                                    padding: const EdgeInsets.symmetric(
+                                      horizontal: 10,
+                                      vertical: 4,
+                                    ),
+                                    decoration: BoxDecoration(
+                                      color: AppTheme.success.withValues(
+                                        alpha: 0.12,
+                                      ),
+                                      borderRadius: BorderRadius.circular(8),
+                                    ),
+                                    child: Text(
+                                      'Current',
+                                      style: theme.textTheme.labelMedium
+                                          ?.copyWith(
+                                            color: AppTheme.success,
+                                            fontWeight: FontWeight.w700,
+                                          ),
+                                    ),
+                                  ),
+                              ],
+                            ),
+                          ),
                         ],
                       ),
 

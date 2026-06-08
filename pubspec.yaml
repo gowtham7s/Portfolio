@@ -33,7 +33,7 @@ dependencies:
 
   # Icons
   cupertino_icons: ^1.0.8
-  font_awesome_flutter: 10.7.0
+  font_awesome_flutter: ^10.7.0
 
   # State Management
   flutter_riverpod: ^2.5.1
@@ -62,6 +62,7 @@ dependencies:
 
   # JSON / Storage
   shared_preferences: ^2.2.3
+  http: ^1.2.2
 
   # Responsive
   responsive_framework: ^1.4.0

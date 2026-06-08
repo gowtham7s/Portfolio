@@ -17,10 +17,51 @@ import '../../features/admin/presentation/pages/admin_login_page.dart';
 import '../../features/admin/presentation/pages/admin_dashboard_page.dart';
 import '../providers/auth_provider.dart';
 
+// ── RouterNotifier ─────────────────────────────────────────────────────────
+// Wraps AuthState as a ChangeNotifier so GoRouter can use refreshListenable.
+// This avoids recreating the entire GoRouter (which would reset navigation)
+// every time auth state changes.
+final routerNotifierProvider = ChangeNotifierProvider<RouterNotifier>((ref) {
+  return RouterNotifier(ref);
+});
+
+class RouterNotifier extends ChangeNotifier {
+  final Ref _ref;
+  bool _isAuthenticated = false;
+
+  RouterNotifier(this._ref) {
+    _isAuthenticated = _ref.read(authProvider).isAuthenticated;
+    _ref.listen<AuthState>(authProvider, (_, next) {
+      _isAuthenticated = next.isAuthenticated;
+      notifyListeners();
+    });
+  }
+
+  String? redirect(BuildContext context, GoRouterState state) {
+    final loc = state.matchedLocation;
+    // Redirect unauthenticated users away from /admin
+    if (loc.startsWith('/admin') &&
+        loc != '/admin/login' &&
+        !_isAuthenticated) {
+      return '/admin/login';
+    }
+    // Redirect authenticated users away from login page
+    if (loc == '/admin/login' && _isAuthenticated) {
+      return '/admin';
+    }
+    return null;
+  }
+}
+
+// ── Router ──────────────────────────────────────────────────────────────────
 final routerProvider = Provider<GoRouter>((ref) {
-  final authState = ref.watch(authProvider);
+  // Use ref.read (not ref.watch) so the GoRouter is created ONCE.
+  // refreshListenable handles redirect re-evaluation without recreating the router.
+  final notifier = ref.read(routerNotifierProvider);
   return GoRouter(
     initialLocation: '/',
+    refreshListenable: notifier,
+    redirect: notifier.redirect,
     routes: [
       ShellRoute(
         builder: (context, state, child) => AppShell(child: child),
@@ -29,12 +70,15 @@ final routerProvider = Provider<GoRouter>((ref) {
           GoRoute(path: '/about', builder: (_, __) => const AboutPage()),
           GoRoute(path: '/skills', builder: (_, __) => const SkillsPage()),
           GoRoute(
-              path: '/experience', builder: (_, __) => const ExperiencePage()),
+            path: '/experience',
+            builder: (_, __) => const ExperiencePage(),
+          ),
           GoRoute(path: '/projects', builder: (_, __) => const ProjectsPage()),
           GoRoute(path: '/resume', builder: (_, __) => const ResumePage()),
           GoRoute(
-              path: '/certifications',
-              builder: (_, __) => const CertificationsPage()),
+            path: '/certifications',
+            builder: (_, __) => const CertificationsPage(),
+          ),
           GoRoute(path: '/blog', builder: (_, __) => const BlogListPage()),
           GoRoute(
             path: '/blog/:slug',
@@ -48,10 +92,6 @@ final routerProvider = Provider<GoRouter>((ref) {
       GoRoute(path: '/admin/login', builder: (_, __) => const AdminLoginPage()),
       GoRoute(
         path: '/admin',
-        redirect: (context, state) {
-          if (!authState.isAuthenticated) return '/admin/login';
-          return null;
-        },
         builder: (_, __) => const AdminDashboardPage(),
         routes: [
           GoRoute(

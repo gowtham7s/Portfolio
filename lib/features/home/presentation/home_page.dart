@@ -5,6 +5,7 @@ import 'package:animated_text_kit/animated_text_kit.dart';
 import 'package:go_router/go_router.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import '../../../core/utils/download_helper.dart';
 import '../../../data/repositories/portfolio_repository.dart';
 import '../../../core/theme/app_theme.dart';
 import '../../../core/theme/theme_provider.dart';
@@ -270,8 +271,10 @@ class _HeroContent extends ConsumerWidget {
                 icon: Icons.download_rounded,
                 outlined: true,
                 onPressed: () async {
-                  final uri = Uri.parse(profile.resume);
-                  if (await canLaunchUrl(uri)) launchUrl(uri);
+                  await downloadAsset(
+                    profile.resume,
+                    'Gowtham_Selvaraj_Resume.pdf',
+                  );
                 },
               ),
             ],
@@ -299,9 +302,9 @@ class _HeroContent extends ConsumerWidget {
                 tooltip: 'Twitter',
               ),
               _SocialIcon(
-                icon: FontAwesomeIcons.medium,
-                url: profile.social['medium'] ?? '',
-                tooltip: 'Medium',
+                icon: FontAwesomeIcons.instagram,
+                url: profile.social['instagram'] ?? '',
+                tooltip: 'Instagram',
               ),
               _SocialIcon(
                 icon: Icons.email_rounded,
@@ -390,6 +393,26 @@ class _HeroAvatar extends StatelessWidget {
   final String photo;
   const _HeroAvatar({required this.photo});
 
+  /// Loads an asset image safely — shows gradient+icon fallback if missing.
+  /// Avoids noisy 404 console errors on Flutter Web for placeholder paths.
+  Widget _safeAssetImage(String path, {double? width, double? height}) {
+    if (path.isEmpty) return _fallback(width, height);
+    return Image.asset(
+      path,
+      width: width,
+      height: height,
+      fit: BoxFit.cover,
+      errorBuilder: (_, __, ___) => _fallback(width, height),
+    );
+  }
+
+  Widget _fallback(double? width, double? height) => Container(
+    width: width,
+    height: height,
+    decoration: const BoxDecoration(gradient: AppTheme.primaryGradient),
+    child: const Icon(Icons.person_rounded, size: 100, color: Colors.white),
+  );
+
   @override
   Widget build(BuildContext context) {
     return AnimatedSection(
@@ -429,20 +452,7 @@ class _HeroAvatar extends StatelessWidget {
                 ],
               ),
               child: ClipOval(
-                child: Image.asset(
-                  photo,
-                  fit: BoxFit.cover,
-                  errorBuilder: (_, __, ___) => Container(
-                    decoration: const BoxDecoration(
-                      gradient: AppTheme.primaryGradient,
-                    ),
-                    child: const Icon(
-                      Icons.person_rounded,
-                      size: 100,
-                      color: Colors.white,
-                    ),
-                  ),
-                ),
+                child: _safeAssetImage(photo, width: 280, height: 280),
               ),
             ),
             // Badge
