@@ -90,8 +90,10 @@ class GitHubCmsService {
 
   // ── Blogs ────────────────────────────────────────────────────────────────
   Future<({List<dynamic> blogs, String sha})> getBlogs() async {
-    final r = await readJsonArray('blogs.json');
-    return (blogs: r.items, sha: r.sha);
+    final file = await _getFile('blogs.json');
+    final data = jsonDecode(file.content) as Map<String, dynamic>;
+    final items = data['blogs'] as List<dynamic>;
+    return (blogs: items, sha: file.sha);
   }
 
   Future<void> saveBlogs({
@@ -99,10 +101,10 @@ class GitHubCmsService {
     required List<Map<String, dynamic>> blogs,
     String commitMessage = 'cms: update blogs',
   }) async {
-    await writeJsonArray(
+    await _putFile(
       filename: 'blogs.json',
       sha: sha,
-      items: blogs,
+      json: {'blogs': blogs},
       commitMessage: commitMessage,
     );
   }

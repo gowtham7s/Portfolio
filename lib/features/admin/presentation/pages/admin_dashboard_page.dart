@@ -761,8 +761,14 @@ class _BlogAdminTabState extends ConsumerState<_BlogAdminTab>
     if (confirm != true) return;
     await cmsOp(() async {
       final result = await cmsService!.getBlogs();
-      final blogs = result.blogs
+      final blogs = (result.blogs as List)
           .cast<Map<String, dynamic>>()
+          .map(
+            (b) => {
+              ...b,
+              'tags': (b['tags'] as List?)?.cast<String>() ?? <String>[],
+            },
+          )
           .where((b) => b['id'] != blog['id'])
           .toList();
       final blogTitle = blog['title'] as String? ?? '';
@@ -779,15 +785,21 @@ class _BlogAdminTabState extends ConsumerState<_BlogAdminTab>
   Future<void> _togglePublish(Map<String, dynamic> blog) async {
     await cmsOp(() async {
       final result = await cmsService!.getBlogs();
-      final blogs = result.blogs.cast<Map<String, dynamic>>().map((b) {
+      final blogs = (result.blogs as List).cast<Map<String, dynamic>>().map((
+        b,
+      ) {
+        final normalized = {
+          ...b,
+          'tags': (b['tags'] as List?)?.cast<String>() ?? <String>[],
+        };
         if (b['id'] == blog['id']) {
           final current = b['status'] as String? ?? 'draft';
           return {
-            ...b,
+            ...normalized,
             'status': current == 'published' ? 'draft' : 'published',
           };
         }
-        return b;
+        return normalized;
       }).toList();
       final blogTitle = blog['title'] as String? ?? '';
       await cmsService!.saveBlogs(
@@ -809,8 +821,16 @@ class _BlogAdminTabState extends ConsumerState<_BlogAdminTab>
         onSave: (blogData) async {
           await cmsOp(() async {
             final result = await cmsService!.getBlogs();
-            List<Map<String, dynamic>> blogs = result.blogs
-                .cast<Map<String, dynamic>>();
+            // Properly convert each blog to ensure nested lists are typed correctly
+            List<Map<String, dynamic>> blogs = (result.blogs as List)
+                .cast<Map<String, dynamic>>()
+                .map(
+                  (b) => {
+                    ...b,
+                    'tags': (b['tags'] as List?)?.cast<String>() ?? <String>[],
+                  },
+                )
+                .toList();
             if (existing == null) {
               blogs = [...blogs, blogData];
             } else {
@@ -968,9 +988,17 @@ class _BlogEditDialogState extends State<_BlogEditDialog> {
     _excerpt = TextEditingController(text: e?['excerpt'] ?? '');
     _content = TextEditingController(text: e?['content'] ?? '');
     _category = TextEditingController(text: e?['category'] ?? 'Flutter');
-    _tags = TextEditingController(
-      text: (e?['tags'] as List?)?.join(', ') ?? '',
-    );
+
+    // Handle tags - can be List<String> or List<dynamic>
+    String tagsText = '';
+    if (e?['tags'] != null) {
+      final tagsList = e!['tags'];
+      if (tagsList is List) {
+        tagsText = tagsList.map((t) => t.toString()).join(', ');
+      }
+    }
+    _tags = TextEditingController(text: tagsText);
+
     _readTime = TextEditingController(text: '${e?['readTime'] ?? 5}');
     _isPublished = (e?['status'] as String?) == 'published';
     _isFeatured = e?['featured'] as bool? ?? false;
