@@ -4,8 +4,8 @@
   "subtitle": "iOS (Swift) & Flutter | Scalable App Design | AI-Integrated Solutions",
   "taglines": [
     "Mobile Lead Developer",
-    "iOS Swift Expert",
-    "Flutter Architect",
+    "iOS & Flutter Expert",
+    "Mobile Architect",
     "Clean Code Advocate",
     "CI/CD Specialist",
     "Technical Leader"
@@ -23,9 +23,21 @@
     "instagram": "https://www.linkedin.com/in/gowtham7s/"
   },
   "stats": [
-    { "label": "Years Experience", "value": "8+" },
-    { "label": "Apps Published", "value": "15+" },
-    { "label": "Daily Active Users", "value": "150K+" },
-    { "label": "Team Members Led", "value": "8+" }
+    {
+      "label": "Years Experience",
+      "value": "8+"
+    },
+    {
+      "label": "Apps Published",
+      "value": "15+"
+    },
+    {
+      "label": "Daily Active Users",
+      "value": "150K+"
+    },
+    {
+      "label": "Team Members Led",
+      "value": "8+"
+    }
   ]
 }
