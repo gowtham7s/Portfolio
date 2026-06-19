@@ -43,17 +43,6 @@
       "pdfUrl": "",
       "color": "#7F52FF",
       "badge": "assets/images/cert_kotlin.png"
-    },
-    {
-      "id": "test",
-      "title": "test certificate 2027",
-      "issuer": "tested",
-      "issuerLogo": "",
-      "date": "Jun 2025",
-      "credentialUrl": "www.google.com",
-      "pdfUrl": "",
-      "color": "#6C63FF",
-      "badge": ""
     }
   ]
 }
