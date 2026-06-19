@@ -125,25 +125,6 @@
         "Achieved 93% customer satisfaction supporting a large-scale eCommerce platform for India and US clients."
       ],
       "technologies": []
-    },
-    {
-      "id": "testt-1780922007264",
-      "role": "sampe tateststeststse",
-      "company": "testt",
-      "location": "sdfsdfsdf",
-      "startDate": "sdfsdf",
-      "endDate": "Presdfssent",
-      "isCurrent": false,
-      "logo": "",
-      "color": "#6C63FF",
-      "highlights": [
-        "sdfsf"
-      ],
-      "technologies": [
-        "cicd",
-        "qa",
-        "ui"
-      ]
     }
   ]
 }
